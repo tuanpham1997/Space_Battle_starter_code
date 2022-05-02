@@ -11,6 +11,7 @@ console.log(enemy)
 // console.log(btn)
 // Create USS Schwarzenegger Ship
 // Create alien ships
+// This class is the object and parameters all ships will be made with
 class SpaceShip {
     constructor(name, hull, firepower, accuracy) {
         this.name = name;
@@ -42,6 +43,7 @@ function getRandomNum(min, max) {
 // change
 const ussHelloWorld = new SpaceShip('USS Schwarzenegger',20, 5, .7);
 const spaceFleet = []
+// Creates 6 alien ships with random specifications within a certain range on page load
 function addShips(i) {
     spaceFleet.push(new SpaceShip(`AlienShip${i}`, getRandomInt(3, 6), getRandomInt(2, 4), getRandomNum(.6, .8)))
 }
@@ -50,7 +52,7 @@ for (let i = 0; i < 6; i++) {
 }
 console.log(spaceFleet)
 let alienAttacker = spaceFleet.pop()
-
+// Display functions to update hulls and enemy name
 function getEnemyHull() { enemy.innerText = `Hull : ${alienAttacker.hull}\nFirePower : ${alienAttacker.firepower}\nAccuracy : ${alienAttacker.accuracy}\n` }
 getEnemyHull()
 
